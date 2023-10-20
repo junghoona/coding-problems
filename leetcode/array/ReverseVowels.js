@@ -4,6 +4,8 @@
  * @param {string} s
  * @return {string}
  */
+
+// Two pointers method : O(n)
 var reverseVowels = function(s) {
     // define vowels
     let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
