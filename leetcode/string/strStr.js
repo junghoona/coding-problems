@@ -12,12 +12,12 @@ var strStr = function(haystack, needle) {
     for (let i = 0; i < haystack.length; i++) {
         if (haystack[i] === needle[pointer]) {
             pointer++;
+            if (pointer === needle.length) {
+                return i - (pointer - 1);
+            }
         } else {
+            i = i - pointer;
             pointer = 0;
-        }
-
-        if (pointer === needle.length) {
-            return haystack.indexOf(needle[0]);
         }
     }
     return -1;
